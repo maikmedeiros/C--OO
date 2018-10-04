@@ -23,6 +23,12 @@ namespace _03_ByteBank
             Conta2.agencia = 123;
             Conta2.conta = 123456;
             Conta2.saldo = 0;
+
+            Console.WriteLine(Conta1 == Conta2);
+            Conta2 = Conta1;
+            Console.WriteLine(Conta1 == Conta2);
+            Console.ReadLine();
+
         }
     }
 }
