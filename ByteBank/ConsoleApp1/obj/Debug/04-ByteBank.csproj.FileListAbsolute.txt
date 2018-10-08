@@ -4,3 +4,4 @@ G:\C#\ByteBank\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
 G:\C#\ByteBank\ConsoleApp1\obj\Debug\04-ByteBank.csproj.CoreCompileInputs.cache
 G:\C#\ByteBank\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 G:\C#\ByteBank\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+G:\C#\ByteBank\ConsoleApp1\obj\Debug\04-ByteBank.csprojAssemblyReference.cache
