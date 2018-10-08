@@ -20,9 +20,22 @@ public class ContaCorrente
          
     }
 
-    public void Depositar(double valorDeposito)
+    public void Depositar(double valor)
     {
-        this.saldo += valorDeposito;
+        this.saldo += valor;
     }
-
+    
+    public bool Trasferir(double valor, ContaCorrente contaDestino)
+    {
+        if (this.saldo < valor)
+        {
+            return false;
+        }
+        else
+        {
+            this.saldo -= valor;
+            contaDestino.Depositar(valor);
+            return true;        
+        }
+    }
 }

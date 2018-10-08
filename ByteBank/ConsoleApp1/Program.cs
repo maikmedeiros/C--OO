@@ -22,7 +22,7 @@ namespace ConsoleApp1
             Console.WriteLine("Conta Corrente: ");
             Conta1.conta = int.Parse(Console.ReadLine());
             Console.WriteLine("Saldo Atual: " + Conta1.saldo);
-            Console.WriteLine("1 - SAQUE / 2 - DEPOSITO");
+            Console.WriteLine("1 - SAQUE / 2 - DEPOSITO / 3 - TRASFERIR");
             escolha = int.Parse(Console.ReadLine());
             switch (escolha) {
                 case 1:
@@ -54,13 +54,20 @@ namespace ConsoleApp1
                     Console.WriteLine("Conta: " + Conta1.conta);
                     Console.WriteLine("Novo Saldo: " + Conta1.saldo);
                 break;
+                case 3:
+                    ContaCorrente Conta2 = new ContaCorrente();
+                    Conta2.titular = "Diego";
+                    Conta2.saldo = 100;
+                    Console.WriteLine("Titular 2: " + Conta2.titular);
+                    Console.WriteLine("Saldo 2: " + Conta2.saldo);
+                    Conta1.Trasferir(50, Conta2);
+                    Console.WriteLine("Titular 2: " + Conta2.titular);
+                    Console.WriteLine("Saldo 2: " + Conta2.saldo);
+                break;
                 default:
                     Console.WriteLine("Opção escolhida errada. Refaça a operação.");
                 break;
             }
-
-
-            
 
         }
     }
