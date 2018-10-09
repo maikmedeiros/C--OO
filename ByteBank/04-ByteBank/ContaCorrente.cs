@@ -6,6 +6,7 @@ public class ContaCorrente
     public int conta;
     public double saldo;
     
+    //FUNÇÃO SACAR
     public bool Sacar(double valor)
     {
         if (this.saldo < valor)
@@ -19,22 +20,22 @@ public class ContaCorrente
         }
          
     }
-
-    public void Depositar(double valor)
+    //FUNÇÃO DEPOSITAR
+    public void Depositar(double valorDepositar)
     {
-        this.saldo += valor;
+        this.saldo += valorDepositar;
     }
-    
-    public bool Trasferir(double valor, ContaCorrente contaDestino)
+    //FUNÇÃO TRASNFERIR
+    public bool Trasferir(double valorTrasferir, ContaCorrente contaDestino)
     {
-        if (this.saldo < valor)
+        if (this.saldo < valorTrasferir)
         {
             return false;
         }
         else
         {
-            this.saldo -= valor;
-            contaDestino.Depositar(valor);
+            this.saldo -= valorTrasferir;
+            contaDestino.Depositar(valorTrasferir);
             return true;        
         }
     }

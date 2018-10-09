@@ -56,13 +56,19 @@ namespace ConsoleApp1
                 break;
                 case 3:
                     ContaCorrente Conta2 = new ContaCorrente();
-                    Conta2.titular = "Diego";
+                    Console.WriteLine("Nome do titular: ");
+                    Conta2.titular = Console.ReadLine();
                     Conta2.saldo = 100;
                     Console.WriteLine("Titular 2: " + Conta2.titular);
                     Console.WriteLine("Saldo 2: " + Conta2.saldo);
-                    Conta1.Trasferir(50, Conta2);
+                    Console.WriteLine("Valor da trasferencia: ");
+
+                    double valorT = double.Parse(Console.ReadLine());
+
+                    bool resultadoTrasferencia = Conta1.Trasferir(valorT, Conta2);
                     Console.WriteLine("Titular 2: " + Conta2.titular);
                     Console.WriteLine("Saldo 2: " + Conta2.saldo);
+                    Console.WriteLine(resultadoTrasferencia);
                 break;
                 default:
                     Console.WriteLine("Opção escolhida errada. Refaça a operação.");
